@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:_5834163Practica13.ViewModels"
+             x:Class="_5834163Practica13.Suma"
+             Title="Suma">
+    
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout
+        Padding="15"
+        Spacing="15"
+        BackgroundColor="Black">
+        
+        <Label 
+            Text="SUMA DE DOS NUMEROS"
+            HorizontalTextAlignment="Center"/>
+
+        <Label Text="Escribe el primer número:"></Label>
+
+        <Entry Placeholder="Primer número aqui"
+               Text="{Binding Num1}"></Entry>
+
+        <Label Text="Escribe el segundo número:"></Label>
+
+        <Entry Placeholder="Segundo número aqui"
+               Text="{Binding Num2}"></Entry>
+
+
+        <Label Text="El total de la suma es:"></Label>
+        
+        <Entry Placeholder=""
+              Text="{Binding TotalSum}" ></Entry>
+        
+        <Button
+                Text="Obtener Suma" 
+                Command="{Binding SumaCommand}"
+                HorizontalOptions="Center"
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:_5834163Practica13.ViewModels"
+             x:Class="_5834163Practica13.Brocha"
+             Title="Brocha">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+    <VerticalStackLayout
+        Padding="15"
+        Spacing="15"
+        BackgroundColor="Black">
+        <Label 
+            Text="LA BROCHA GORDA"
+            HorizontalTextAlignment="Center"/>
+
+            <Label Text="Digite el precio por metro:"></Label>
+
+            <Entry Text="{Binding Precio}" Placeholder=""></Entry>
+
+            <Label Text="Digite los metros cuadrados a pintar:"></Label>
+
+            <Entry Text="{Binding Metros}" Placeholder=""></Entry>
+
+
+            <Label Text="El presupuesto es de:"></Label>
+            <Entry Placeholder=""
+          Text="{Binding TotPresupuesto}" ></Entry>
+
+            <Button
+          Text="Obtener Presupuesto" 
+          Command="{Binding TotalPresupuestoCommand}"
+          HorizontalOptions="Center"
+          BackgroundColor="Indigo"
+          TextColor="White"
+          FontAttributes="Bold"/>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

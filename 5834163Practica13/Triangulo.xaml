@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:_5834163Practica13.ViewModels"
+             x:Class="_5834163Practica13.Triangulo"
+             Title="Triangulo">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+    <VerticalStackLayout
+        Padding="15"
+        Spacing="15"
+        BackgroundColor="Black">
+        <Label 
+    Text="AREA DE UN TRIANGULO"
+    HorizontalTextAlignment="Center"/>
+
+        <Label Text="Escribe el primer lado:"></Label>
+
+        <Entry Placeholder="Primer lado aqui"
+       Text="{Binding Lado1}"></Entry>
+
+        <Label Text="Escribe el segundo lado:"></Label>
+
+        <Entry Placeholder="Segundo lado aqui"
+       Text="{Binding Lado2}"></Entry>
+
+        <Label Text="Escribe el tercer lado:"></Label>
+
+        <Entry Placeholder="Tercer lado aqui"
+        Text="{Binding Lado3}"></Entry>
+
+
+        <Label Text="El area del triangulo es de:"></Label>
+
+        <Entry Placeholder=""
+      Text="{Binding TotalLado}" ></Entry>
+
+        <Button
+        Text="Obtener Area" 
+        Command="{Binding areaCommand}"
+        HorizontalOptions="Center"
+        BackgroundColor="Indigo"
+        TextColor="White"
+        FontAttributes="Bold"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+  

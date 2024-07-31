@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_5834163Practica13.MainPage"
+             Title="Practica 13">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="15"
+            Spacing="25"
+            BackgroundColor="Black">
+            <Image
+                Source="practica13.png"
+                HeightRequest="200"
+              />
+
+            
+            <Label
+                Text="1.Construya un programa en net Maui que calcule e imprima la suma de dos números."
+                HorizontalTextAlignment="Center" FontAttributes="Italic" FontFamily="string"/>
+
+            <Button
+                x:Name="Suma"
+                Text="Ir al ejercicio" 
+                Clicked="Suma_Clicked"
+                HorizontalOptions="Center"
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+
+            <Label
+                Text="2.Construya un programa que dados los tres lados de un triángulo pueda determinar su área."
+                HorizontalTextAlignment="Center" FontAttributes="Italic" FontFamily="string"/>
+
+            <Button
+                x:Name="Triangulo"
+                Text="Ir al ejercicio" 
+                Clicked="Triangulo_Clicked"
+                HorizontalOptions="Center"
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="3.Construye un programa que calcule la distancia entre dos puntos, dado como datos las coordenadas de los puntos p1 y p2."
+                HorizontalTextAlignment="Center" FontAttributes="Italic" FontFamily="string"/>
+            
+            <Button
+                x:Name="Distancia"
+                Text="Ir al ejercicio" 
+                Clicked="Distancia_Clicked"
+                HorizontalOptions="Center" 
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+
+            <Label
+                Text="4.Pinturas “La brocha gorda” requiere determinar cuánto cobrar por trabajos de pintura. Considere que se cobra por m2 y realice un programa que le permita ir generando presupuestos para cada cliente."
+                HorizontalTextAlignment="Center" FontAttributes="Italic" FontFamily="string"/>
+          
+            <Button
+                x:Name="Brocha"
+                Text="Ir al ejercicio" 
+                Clicked="Brocha_Clicked"
+                HorizontalOptions="Center" 
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+
+            <Label
+                Text="5.Construya un programa que, dado como dato el sueldo de un trabajador, le aplique un aumento del 15% si su sueldo es inferior a $1,000 y 12% en caso contrario. Imprima el nuevo sueldo del trabajador."
+                HorizontalTextAlignment="Center" FontAttributes="Italic" FontFamily="string"/>
+
+            <Button
+                x:Name="Sueldo"
+                Text="Ir al ejercicio" 
+                Clicked="Sueldo_Clicked"
+                HorizontalOptions="Center" 
+                BackgroundColor="Indigo"
+                TextColor="White"
+                FontAttributes="Bold"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

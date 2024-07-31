@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:_5834163Practica13.ViewModels"
+             x:Class="_5834163Practica13.Sueldo"
+             Title="Sueldo">
+    
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout
+        Padding="15"
+        Spacing="15"
+        BackgroundColor="Black">
+        <Label 
+    Text="SUELDO AUMENTADO"
+    HorizontalTextAlignment="Center"/>
+
+        <Label Text="Digite el sueldo actual del trabajador:"></Label>
+
+        <Entry Text="{Binding ST}" Placeholder=""></Entry>
+
+        <Label Text="El nuevo sueldo del trabajor es de:"></Label>
+        <Entry Placeholder=""
+  Text="{Binding TotalSueldo}" ></Entry>
+
+        <Button
+  Text="Obtener Sueldo" 
+  Command="{Binding SueldoAumentadoCommand}"
+  HorizontalOptions="Center"
+  BackgroundColor="Indigo"
+  TextColor="White"
+  FontAttributes="Bold"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

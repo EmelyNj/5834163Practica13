@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:_5834163Practica13.ViewModels"
+             x:Class="_5834163Practica13.Distancia"
+             Title="Distancia">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+    <VerticalStackLayout
+            Padding="15"
+            Spacing="15"
+            BackgroundColor="Black">
+            <Label 
+            Text="DISTANCIA ENTRE DOS PUNTOS"
+            HorizontalTextAlignment="Center"/>
+
+            <Label Text="Escribe la cantidad de X1:"></Label>
+
+        <Entry Text="{Binding X1}" Placeholder=""></Entry>
+
+            <Label Text="Escribe la cantidad de X2:"></Label>
+
+            <Entry Text="{Binding X2}" Placeholder=""></Entry>
+
+            <Label Text="Escribe la cantidad de Y1:"></Label>
+
+            <Entry Text="{Binding Y1}" Placeholder=""></Entry>
+
+            <Label Text="Escribe la cantidad de Y2:"></Label>
+
+            <Entry Text="{Binding Y2}" Placeholder=""></Entry>
+
+
+            <Label Text="El total entre las dos distancias es de:"></Label>
+            <Entry Placeholder=""
+                  Text="{Binding TotalDis}" ></Entry>
+
+            <Button
+                  Text="Obtener Distancia" 
+                  Command="{Binding DistanciaCommand}"
+                  HorizontalOptions="Center"
+                  BackgroundColor="Indigo"
+                  TextColor="White"
+                  FontAttributes="Bold"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
